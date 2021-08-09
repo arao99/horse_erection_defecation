@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>競走馬の馬っけ・ボロ情報の共有 -閲覧-</title>
+  </head>
+  <body>
+    <h1>競走馬の馬っけ・ボロ情報の共有 -閲覧- </h1>
+    <div>
+      <span><a href="browse.html">閲覧</a></span>
+      <span><a href="index.html">トップ</a></span>
+    </div>
+    <hr>
+    <form method="POST">
+      <table>
+        <tr>
+          <td>日付</td>
+          <td><input type="text" name="date" value="2021/08/09" readonly></td>
+        </tr>
+        <tr>
+          <td>競馬場</td>
+          <td><input type="text" name="course"></td>
+        </tr>
+        <tr>
+          <td>レース番号</td>
+          <td>
+            <select name="race_number">
+              <option value="1" selected>1R</option>
+              <option value="2">2R</option>
+              <option value="3">3R</option>
+              <option value="4">4R</option>
+              <option value="5">5R</option>
+              <option value="6">6R</option>
+              <option value="7">7R</option>
+              <option value="8">8R</option>
+              <option value="9">9R</option>
+              <option value="10">10R</option>
+              <option value="11">11R</option>
+              <option value="12">12R</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>馬番</td>
+          <td>
+            <select name="race_number">
+              <option value="1" selected>1番</option>
+              <option value="2">2番</option>
+              <option value="3">3番</option>
+              <option value="4">4番</option>
+              <option value="5">5番</option>
+              <option value="6">6番</option>
+              <option value="7">7番</option>
+              <option value="8">8番</option>
+              <option value="9">9番</option>
+              <option value="10">10番</option>
+              <option value="11">11番</option>
+              <option value="12">12番</option>
+              <option value="13">13番</option>
+              <option value="14">14番</option>
+              <option value="15">15番</option>
+              <option value="16">16番</option>
+              <option value="17">17番</option>
+              <option value="18">18番</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>馬名</td>
+          <td><input type="text" name="horse_name"></td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="when" value="1" checked>パドック</td>
+          <td><input type="radio" name="when" value="2">返し馬</td>
+        </tr>
+        <tr>
+          <td>馬っけ</td>
+          </td>
+          <td>
+            <select name="erection_level">
+              <option value="0" selected>なし</option>
+              <option value="1">ブラブラ</option>
+              <option value="2">ガチガチ</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>ボロ</td>
+          <td>
+            <select name="dung_type">
+              <option value="0" selected>なし</option>
+              <option value="1">普通</option>
+              <option value="2">下痢</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="投稿(調整中)">
+    </form>
+    <hr>
+    <div>
+      <span><a href="browse.html">閲覧</a></span>
+      <span><a href="index.html">トップ</a></span>
+    </div>
+  </body>
+</html>
