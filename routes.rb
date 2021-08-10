@@ -18,15 +18,15 @@ get '/browse' do
 end
 
 get '/readme' do
-  'readme!'
+  erb :readme
 end
 
 get '/history' do
-  'history!'
+  erb :history
 end
 
 get '/todo' do
-  'todo!'
+  erb :todo
 end
 
 not_found do
