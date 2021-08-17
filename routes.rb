@@ -14,7 +14,7 @@ post '/post_record' do
 end
 
 get '/browse' do
-  'browse!'
+  erb :browse
 end
 
 get '/readme' do

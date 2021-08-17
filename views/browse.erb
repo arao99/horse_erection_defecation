@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>競走馬の馬っけ・ボロ情報の共有 -閲覧-</title>
+  </head>
+  <body>
+    <h1>競走馬の馬っけ・ボロ情報の共有 -閲覧-</h1>
+    <% Post.find_each do |rec| %>
+      <hr>
+      <div>
+        <h2>
+          <span><%= "#{rec.year}年#{rec.month}月#{rec.day}日(#{rec.weekday})" %></span>
+          <span><%= rec.course %></span>
+          <span><%= rec.race_number %>R</span>
+        </h2>
+        <h3>
+          <span><%= rec.horse_number %>番</span>
+          <span><%= rec.horse_name %></span>
+        </h3>
+        <div>
+          <% if rec.when == 1 %>
+            <span>パドック</span><br>
+          <% elsif rec.when == 2 %>
+            <span>返し馬</span><br>
+          <% end %>
+          <% if rec.erection_level != 0 %>
+            <span>馬っけ</span>
+            <% if rec.erection_level == 1 %>
+              <span>ブラブラ</span><br>
+            <% elsif rec.erection_level == 2 %>
+              <span>ガチガチ</span><br>
+            <% end %>
+          <% end %>
+          <% if rec.dung_type != 0 %>
+            <span>ボロ</span>
+            <% if rec.dung_type == 1 %>
+              <span>普通</span><br>
+            <% elsif rec.dung_type == 2 %>
+              <span>下痢</span><br>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+    <%= erb :footer %>
+  </body>
+</html>
