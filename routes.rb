@@ -9,12 +9,12 @@ get '/post' do
   erb :post
 end
 
-post '/post_record' do
+post '/post' do
   @message = validate(params)
   if @message
     erb :post
   else
-    create_post_record(params)
+    create_record(params)
     @message = '投稿しました！'
     erb :post
   end
@@ -49,10 +49,10 @@ WEEKDAYS_ARRAY = ['日', '月', '火', '水', '木', '金', '土']
 def validate(params)
   return '馬名はカタカナで入力してください！' unless params[:horse_name] =~ /^[ァ-ヴー]*$/
   return '馬っけかボロのどちらかは選んでください！' if params[:erection_level] == '0' && params[:dung_type] == '0'
-  return nil
+  nil
 end
 
-def create_post_record(params)
+def create_record(params)
   date = Time.parse(params[:date])
   weekday = WEEKDAYS_ARRAY[date.wday]
   Post.create(
