@@ -37,11 +37,11 @@ get '/todo' do
 end
 
 not_found do
-  '404!'
+  'Not Found'
 end
 
-error do
-  'error!'
+error 500 do
+  'Sorry, something wrong.'
 end
 
 WEEKDAYS_ARRAY = ['日', '月', '火', '水', '木', '金', '土']
