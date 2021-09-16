@@ -11,7 +11,8 @@
       <table>
         <tr>
           <td>日付</td>
-          <td><input type="text" name="date" value="<%= Time.now.strftime('%Y/%m/%d') %>" readonly></td>
+          <% now = Time.now %>
+          <td><input type="text" name="date" value="<%= now.strftime('%Y/%m/%d') %>(<%= WEEKDAYS_ARRAY[now.wday] %>)" readonly></td>
         </tr>
         <tr>
           <td>競馬場</td>
